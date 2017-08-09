@@ -60,6 +60,8 @@ static NSString *const RWLSearchThrottleTimerSearchTermKey = @"searchTerm";
   [super viewDidLoad];
 
   [self setupNotifications];
+  
+  _collectionNode.view.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
 }
 
 - (void)setupNotifications
