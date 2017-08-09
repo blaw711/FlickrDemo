@@ -18,6 +18,7 @@
 		5A4F59D11F3A6CCA00C84D80 /* RWLFlickrResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59D01F3A6CCA00C84D80 /* RWLFlickrResultsViewController.m */; };
 		5A4F59D41F3A6EA300C84D80 /* RWLFlickrSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59D31F3A6EA300C84D80 /* RWLFlickrSearchViewController.m */; };
 		5A4F59D71F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59D61F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.m */; };
+		5A9A00341F3BAA2F00FE5FB2 /* RWLFlickrResultHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A00331F3BAA2F00FE5FB2 /* RWLFlickrResultHistory.m */; };
 		5A9E06211F39073F00A5C034 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E06201F39073F00A5C034 /* main.m */; };
 		5A9E06241F39073F00A5C034 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E06231F39073F00A5C034 /* AppDelegate.m */; };
 		5A9E062C1F39073F00A5C034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E062B1F39073F00A5C034 /* Assets.xcassets */; };
@@ -66,6 +67,8 @@
 		5A4F59D31F3A6EA300C84D80 /* RWLFlickrSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLFlickrSearchViewController.m; sourceTree = "<group>"; };
 		5A4F59D51F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLFlickrImageDetailViewController.h; sourceTree = "<group>"; };
 		5A4F59D61F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLFlickrImageDetailViewController.m; sourceTree = "<group>"; };
+		5A9A00321F3BAA2F00FE5FB2 /* RWLFlickrResultHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLFlickrResultHistory.h; sourceTree = "<group>"; };
+		5A9A00331F3BAA2F00FE5FB2 /* RWLFlickrResultHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLFlickrResultHistory.m; sourceTree = "<group>"; };
 		5A9E061C1F39073F00A5C034 /* FlickrDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9E06201F39073F00A5C034 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A9E06221F39073F00A5C034 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				5A4F59CA1F3A1F3400C84D80 /* RWLFlickrImage.m */,
 				5A4F59CC1F3A22A400C84D80 /* RWLFlickrResponse.h */,
 				5A4F59CD1F3A22A400C84D80 /* RWLFlickrResponse.m */,
+				5A9A00321F3BAA2F00FE5FB2 /* RWLFlickrResultHistory.h */,
+				5A9A00331F3BAA2F00FE5FB2 /* RWLFlickrResultHistory.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A9A00341F3BAA2F00FE5FB2 /* RWLFlickrResultHistory.m in Sources */,
 				5A4F59C31F3A143400C84D80 /* RWLHTTPSessionManager.m in Sources */,
 				5A4F59CE1F3A22A400C84D80 /* RWLFlickrResponse.m in Sources */,
 				5A4F59D71F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.m in Sources */,

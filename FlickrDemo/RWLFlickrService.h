@@ -15,6 +15,6 @@
 
 - (instancetype)initWithSessionManager:(RWLHTTPSessionManager *)sessionManager;
 
-- (void)searchFlickrImageWithTerm:(NSString *)term page:(NSInteger)page limit:(NSInteger)limit completion:(void (^)(RWLFlickrResponse *response, NSError *NSError))completion;
+- (void)searchFlickrImageWithTerm:(NSString *)term page:(NSInteger)page limit:(NSInteger)limit completion:(void (^)(RWLFlickrResponse *response, NSError *error))completion;
 
 @end

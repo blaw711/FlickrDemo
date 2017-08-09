@@ -13,18 +13,6 @@ static NSString * const flickrAPISecret = @"f1274220b72ab20c";
 
 @implementation RWLHTTPSessionManager
 
-- (instancetype)init
-{
-  if (self = [super init]) {
-    
-//    AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
-//    responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-//    self.responseSerializer = responseSerializer;
-  }
-  
-  return self;
-}
-
 - (void)searchFlickrImageWithTerm:(NSString *)term page:(NSInteger)page limit:(NSInteger)limit completion:(void (^)(id, NSError *))completion
 {
   if (!term || ![term isKindOfClass:[NSString class]] || term.length == 0) {

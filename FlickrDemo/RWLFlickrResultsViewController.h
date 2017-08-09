@@ -9,9 +9,10 @@
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
 
 @class RWLFlickrService;
+@class RWLFlickrResultHistory;
 
 @interface RWLFlickrResultsViewController : ASViewController <UISearchResultsUpdating>
 
-- (instancetype)initWithFlickrService:(RWLFlickrService *)flickrService;
+- (instancetype)initWithFlickrService:(RWLFlickrService *)flickrService flickrResultHistory:(RWLFlickrResultHistory *)resultHistory;
 
 @end

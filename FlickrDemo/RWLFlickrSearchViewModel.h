@@ -13,6 +13,8 @@
 
 @interface RWLFlickrSearchViewModel : NSObject
 
+@property (nonatomic, strong, readonly) NSString *currentSearchTerm;
+
 - (instancetype)initWithFlickrService:(RWLFlickrService *)flickrService;
 
 - (NSInteger)numberOfImages;
@@ -26,5 +28,6 @@
 
 - (BOOL)canPageMorePhotos;
 
+- (NSArray <RWLFlickrImage *> *)getCurrentImageResults;
 
 @end

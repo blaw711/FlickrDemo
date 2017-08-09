@@ -51,11 +51,53 @@
   return self;
 }
 
+- (id)initWithCoder:(NSCoder *)decoder
+{
+  if (self = [super init]) {
+    _isFamily = [decoder decodeObjectForKey:@"isFamily"];
+    _isFriend = [decoder decodeObjectForKey:@"isFriend"];
+    _isPublic = [decoder decodeObjectForKey:@"isPublic"];
+    
+    _farm = [decoder decodeObjectForKey:@"farm"];
+    _server = [decoder decodeObjectForKey:@"server"];
+    _secret = [decoder decodeObjectForKey:@"secret"];
+    
+    _owner = [decoder decodeObjectForKey:@"owner"];
+    _imageID = [decoder decodeObjectForKey:@"imageID"];
+    _title = [decoder decodeObjectForKey:@"title"];
+    
+    _smallURL = [decoder decodeObjectForKey:@"smallURL"];
+    _mediumURL = [decoder decodeObjectForKey:@"mediumURL"];
+    _largeURL = [decoder decodeObjectForKey:@"largeURL"];
+  }
+  
+  return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+  [encoder encodeObject:self.isFamily forKey:@"isFamily"];
+  [encoder encodeObject:self.isFriend forKey:@"isFriend"];
+  [encoder encodeObject:self.isPublic forKey:@"isPublic"];
+  
+  [encoder encodeObject:self.farm forKey:@"farm"];
+  [encoder encodeObject:self.server forKey:@"server"];
+  [encoder encodeObject:self.secret forKey:@"secret"];
+  
+  [encoder encodeObject:self.owner forKey:@"owner"];
+  [encoder encodeObject:self.imageID forKey:@"imageID"];
+  [encoder encodeObject:self.title forKey:@"title"];
+  
+  [encoder encodeObject:self.smallURL forKey:@"smallURL"];
+  [encoder encodeObject:self.mediumURL forKey:@"mediumURL"];
+  [encoder encodeObject:self.largeURL forKey:@"largeURL"];
+}
+
 - (void)configureImageURLs
 {
   NSString *baseFormatString = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@", self.farm, self.server, self.imageID, self.secret];
   
-  NSString *smallURLString = [baseFormatString stringByAppendingString:@"_t.jpg"];
+  NSString *smallURLString = [baseFormatString stringByAppendingString:@"_m.jpg"];
   _smallURL = [NSURL URLWithString:smallURLString];
   
   NSString *mediumURLString = [baseFormatString stringByAppendingString:@"_z.jpg"];

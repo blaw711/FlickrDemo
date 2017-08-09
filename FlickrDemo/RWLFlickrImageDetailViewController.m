@@ -40,12 +40,34 @@
   [super viewDidLoad];
   
   self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+  
+  self.title = self.flickrImage.title;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+  [super viewDidAppear:animated];
+  
+  self.navigationController.hidesBarsOnTap = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+  [super viewWillDisappear:animated];
+  
+  self.navigationController.hidesBarsOnTap = NO;
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+  [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+  
+  [self.multiplexImageNode reloadImageIdentifierSources];
 }
 
 #pragma mark - ASMultiplexImageNodeDataSource
 
-- (nullable NSURL *)multiplexImageNode:(ASMultiplexImageNode *)imageNode URLForImageIdentifier:(ASImageIdentifier)imageIdentifier
+- (NSURL *)multiplexImageNode:(ASMultiplexImageNode *)imageNode URLForImageIdentifier:(ASImageIdentifier)imageIdentifier
 {
   NSURL *url;
   
@@ -59,15 +81,5 @@
   
   return url;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

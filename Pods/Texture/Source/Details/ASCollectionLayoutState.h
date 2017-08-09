@@ -34,7 +34,7 @@ AS_SUBCLASSING_RESTRICTED
  *
  * @param contentSize The content size of the collection's layout
  *
- * @param elementToLayoutArrtibutesMap Map between elements to their layout attributes. The map may contain all elements, or a subset of them and will be updated later. 
+ * @param elementToLayoutArrtibutesMap Map between elements to their layout attributes. The map may contain all elements, or a subset of them and will be updated later.
  * Also, it should have NSMapTableObjectPointerPersonality and NSMapTableWeakMemory as key options.
  */
 - (instancetype)initWithElements:(ASElementMap *)elements contentSize:(CGSize)contentSize elementToLayoutArrtibutesMap:(NSMapTable<ASCollectionElement *, UICollectionViewLayoutAttributes *> *)attrsMap NS_DESIGNATED_INITIALIZER;

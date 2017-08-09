@@ -8,9 +8,12 @@
 
 #import "RWLFlickrResultsViewController.h"
 #import "RWLFlickrImageDetailViewController.h"
+#import "RWLFlickrResultHistory.h"
 #import "RWLImageCellNode.h"
 #import "RWLFlickrSearchViewModel.h"
 #import "RWLFlickrService.h"
+
+static NSString *const RWLSearchThrottleTimerSearchTermKey = @"searchTerm";
 
 @interface RWLFlickrResultsViewController () <ASCollectionDataSource, ASCollectionDelegate>
 
@@ -20,23 +23,28 @@
 
 @property (nonatomic, strong) RWLFlickrSearchViewModel *viewModel;
 
+@property (nonatomic, strong) RWLFlickrResultHistory *resultHistory;
+
+@property (nonatomic, strong) NSTimer *searchThrottleTimer;
+
 @end
 
 @implementation RWLFlickrResultsViewController
 
-- (instancetype)initWithFlickrService:(RWLFlickrService *)flickrService
+- (instancetype)initWithFlickrService:(RWLFlickrService *)flickrService flickrResultHistory:(RWLFlickrResultHistory *)resultHistory
 {
   UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
   CGFloat width = [UIScreen mainScreen].bounds.size.width;
-  flowLayout.minimumLineSpacing = 2;
-  flowLayout.minimumInteritemSpacing = 2;
-  flowLayout.itemSize = CGSizeMake(width / 3 - 3, width / 3 - 3);
-  flowLayout.sectionInset = UIEdgeInsetsMake(2, 2, 2, 2);
+  flowLayout.minimumLineSpacing = 1;
+  flowLayout.minimumInteritemSpacing = 1;
+  flowLayout.itemSize = CGSizeMake(width / 3 - 1, width / 3 - 1);
+  flowLayout.sectionInset = UIEdgeInsetsMake(1, 0, 1, 0);
   
   _collectionNode = [[ASCollectionNode alloc] initWithCollectionViewLayout:flowLayout];
   
   if (self = [super initWithNode:_collectionNode]) {
     _flickrService = flickrService;
+    _resultHistory = resultHistory;
     
     _viewModel = [[RWLFlickrSearchViewModel alloc] initWithFlickrService:flickrService];
     
@@ -51,17 +59,30 @@
 {
   [super viewDidLoad];
 
+  [self setupNotifications];
+}
+
+- (void)setupNotifications
+{
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminateNotification:) name:UIApplicationWillTerminateNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackgroundNotification:) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
-  [self.viewModel searchFlickrImageWithTerm:searchController.searchBar.text completion:^(BOOL finished, NSError *error) {
-    [self.collectionNode reloadData];
-  }];
+  NSString *searchTerm = searchController.searchBar.text;
   
-  [self.collectionNode reloadData];
+  if (![searchTerm isEqualToString:self.viewModel.currentSearchTerm]) {
+    
+    if (self.searchThrottleTimer) {
+      [self.searchThrottleTimer invalidate];
+      self.searchThrottleTimer = nil;
+    }
+    
+    self.searchThrottleTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(searchThrottleTimerTicked:) userInfo:@{RWLSearchThrottleTimerSearchTermKey:searchTerm} repeats:NO];
+  }
 }
 
 #pragma mark - ASCollectionDataSource
@@ -92,7 +113,7 @@
   RWLFlickrImage *image = [self.viewModel imageForIndexPath:indexPath];
   
   RWLFlickrImageDetailViewController *detailViewController = [[RWLFlickrImageDetailViewController alloc] initWithImage:image];
-  [self.self.parentViewController.presentingViewController.navigationController pushViewController:detailViewController animated:YES];
+  [self.parentViewController.presentingViewController.navigationController pushViewController:detailViewController animated:YES];
 }
 
 - (void)collectionNode:(ASCollectionNode *)collectionNode willBeginBatchFetchWithContext:(ASBatchContext *)context
@@ -109,6 +130,47 @@
 - (BOOL)shouldBatchFetchForCollectionNode:(ASCollectionNode *)collectionNode
 {
   return [self.viewModel canPageMorePhotos];
+}
+
+#pragma mark - NSNotifications
+
+- (void)applicationWillTerminateNotification:(NSNotification *)notification
+{
+  [self saveCurrentImageResults];
+}
+
+- (void)applicationDidEnterBackgroundNotification:(NSNotification *)notification
+{
+  [self saveCurrentImageResults];
+}
+
+#pragma mark - Timer Call
+
+- (void)searchThrottleTimerTicked:(NSTimer *)timer
+{
+  NSString *searchTerm = timer.userInfo[RWLSearchThrottleTimerSearchTermKey];
+  
+  [self saveCurrentImageResults];
+  
+  [self.viewModel searchFlickrImageWithTerm:searchTerm completion:^(BOOL finished, NSError *error) {
+    [self.collectionNode reloadData];
+  }];
+  
+  [self.collectionNode reloadData];
+  
+  [timer invalidate];
+  timer = nil;
+}
+
+#pragma mark - Convenience Methods
+
+- (void)saveCurrentImageResults
+{
+  NSArray *currentImageResults = [self.viewModel getCurrentImageResults];
+  
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    [self.resultHistory saveFlickrImages:currentImageResults];
+  });
 }
 
 @end
