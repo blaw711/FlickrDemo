@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "RWLFlickrSearchViewController.h"
+#import "RWLHTTPSessionManager.h"
+#import "RWLFlickrService.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +23,13 @@
   
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.backgroundColor = [UIColor whiteColor];
-  self.window.rootViewController = [ViewController new];
+  
+  RWLHTTPSessionManager *sessionManager = [RWLHTTPSessionManager new];
+  RWLFlickrService *flickrService = [[RWLFlickrService alloc] initWithSessionManager:sessionManager];
+  
+  ASNavigationController *navigationController = [[ASNavigationController alloc] initWithRootViewController:[[RWLFlickrSearchViewController alloc] initWithFlickrService:flickrService]];
+  
+  self.window.rootViewController = navigationController;
   [self.window makeKeyAndVisible];
   
   return YES;
