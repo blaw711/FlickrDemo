@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0129C21245AB87D52612395A /* libPods-FlickrDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4176C9EE9E6A7E3362F0D8F /* libPods-FlickrDemoTests.a */; };
+		31878BF04F443F2EC62E243A /* Pods_FlickrDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB40A1B235F0EEFC754EE5E /* Pods_FlickrDemo.framework */; };
+		4BCB2B28E19E54613734EB67 /* Pods_FlickrDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4553D73ECEEB795E9B7138F /* Pods_FlickrDemoUITests.framework */; };
+		5A4F59B71F3A065200C84D80 /* RWLImageCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59B61F3A065200C84D80 /* RWLImageCellNode.m */; };
+		5A4F59BB1F3A0A9E00C84D80 /* RWLFlickrSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59BA1F3A0A9E00C84D80 /* RWLFlickrSearchViewModel.m */; };
+		5A4F59C31F3A143400C84D80 /* RWLHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59C21F3A143400C84D80 /* RWLHTTPSessionManager.m */; };
+		5A4F59C71F3A1F1A00C84D80 /* RWLFlickrService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59C61F3A1F1A00C84D80 /* RWLFlickrService.m */; };
+		5A4F59CB1F3A1F3400C84D80 /* RWLFlickrImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59CA1F3A1F3400C84D80 /* RWLFlickrImage.m */; };
+		5A4F59CE1F3A22A400C84D80 /* RWLFlickrResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59CD1F3A22A400C84D80 /* RWLFlickrResponse.m */; };
+		5A4F59D11F3A6CCA00C84D80 /* RWLFlickrResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59D01F3A6CCA00C84D80 /* RWLFlickrResultsViewController.m */; };
+		5A4F59D41F3A6EA300C84D80 /* RWLFlickrSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59D31F3A6EA300C84D80 /* RWLFlickrSearchViewController.m */; };
+		5A4F59D71F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F59D61F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.m */; };
 		5A9E06211F39073F00A5C034 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E06201F39073F00A5C034 /* main.m */; };
 		5A9E06241F39073F00A5C034 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E06231F39073F00A5C034 /* AppDelegate.m */; };
-		5A9E06271F39073F00A5C034 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E06261F39073F00A5C034 /* ViewController.m */; };
 		5A9E062C1F39073F00A5C034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E062B1F39073F00A5C034 /* Assets.xcassets */; };
 		5A9E062F1F39073F00A5C034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E062D1F39073F00A5C034 /* LaunchScreen.storyboard */; };
 		5A9E063A1F39073F00A5C034 /* FlickrDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E06391F39073F00A5C034 /* FlickrDemoTests.m */; };
 		5A9E06451F39073F00A5C034 /* FlickrDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E06441F39073F00A5C034 /* FlickrDemoUITests.m */; };
-		5C8D6F9712252581E9709BA4 /* libPods-FlickrDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7297E1D3137FD01A9BC1C229 /* libPods-FlickrDemo.a */; };
-		B0091EC027728C9866DE13C8 /* libPods-FlickrDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D7BCB0D59C22D04DB4F397 /* libPods-FlickrDemoUITests.a */; };
+		AC443192EEAA6B8D9A640C16 /* Pods_FlickrDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893100911BC70DAB760370E4 /* Pods_FlickrDemoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +48,28 @@
 		0C91BCB0EB8D27A8E938E87B /* Pods-FlickrDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrDemo/Pods-FlickrDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		12343885D96C19A2209748A5 /* Pods-FlickrDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrDemoTests/Pods-FlickrDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		139F2F4A8C8CAE624AC1BACE /* Pods-FlickrDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrDemo/Pods-FlickrDemo.release.xcconfig"; sourceTree = "<group>"; };
+		5A4F59B51F3A065200C84D80 /* RWLImageCellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLImageCellNode.h; sourceTree = "<group>"; };
+		5A4F59B61F3A065200C84D80 /* RWLImageCellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLImageCellNode.m; sourceTree = "<group>"; };
+		5A4F59B91F3A0A9E00C84D80 /* RWLFlickrSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLFlickrSearchViewModel.h; sourceTree = "<group>"; };
+		5A4F59BA1F3A0A9E00C84D80 /* RWLFlickrSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLFlickrSearchViewModel.m; sourceTree = "<group>"; };
+		5A4F59C11F3A143400C84D80 /* RWLHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLHTTPSessionManager.h; sourceTree = "<group>"; };
+		5A4F59C21F3A143400C84D80 /* RWLHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLHTTPSessionManager.m; sourceTree = "<group>"; };
+		5A4F59C51F3A1F1A00C84D80 /* RWLFlickrService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLFlickrService.h; sourceTree = "<group>"; };
+		5A4F59C61F3A1F1A00C84D80 /* RWLFlickrService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLFlickrService.m; sourceTree = "<group>"; };
+		5A4F59C91F3A1F3400C84D80 /* RWLFlickrImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLFlickrImage.h; sourceTree = "<group>"; };
+		5A4F59CA1F3A1F3400C84D80 /* RWLFlickrImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLFlickrImage.m; sourceTree = "<group>"; };
+		5A4F59CC1F3A22A400C84D80 /* RWLFlickrResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLFlickrResponse.h; sourceTree = "<group>"; };
+		5A4F59CD1F3A22A400C84D80 /* RWLFlickrResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLFlickrResponse.m; sourceTree = "<group>"; };
+		5A4F59CF1F3A6CCA00C84D80 /* RWLFlickrResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLFlickrResultsViewController.h; sourceTree = "<group>"; };
+		5A4F59D01F3A6CCA00C84D80 /* RWLFlickrResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLFlickrResultsViewController.m; sourceTree = "<group>"; };
+		5A4F59D21F3A6EA300C84D80 /* RWLFlickrSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLFlickrSearchViewController.h; sourceTree = "<group>"; };
+		5A4F59D31F3A6EA300C84D80 /* RWLFlickrSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLFlickrSearchViewController.m; sourceTree = "<group>"; };
+		5A4F59D51F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLFlickrImageDetailViewController.h; sourceTree = "<group>"; };
+		5A4F59D61F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLFlickrImageDetailViewController.m; sourceTree = "<group>"; };
 		5A9E061C1F39073F00A5C034 /* FlickrDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9E06201F39073F00A5C034 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A9E06221F39073F00A5C034 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A9E06231F39073F00A5C034 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5A9E06251F39073F00A5C034 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5A9E06261F39073F00A5C034 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5A9E062B1F39073F00A5C034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A9E062E1F39073F00A5C034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A9E06301F39073F00A5C034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,11 +80,11 @@
 		5A9E06441F39073F00A5C034 /* FlickrDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrDemoUITests.m; sourceTree = "<group>"; };
 		5A9E06461F39073F00A5C034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E489AE9AAE3D95D016C47E9 /* Pods-FlickrDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrDemoUITests/Pods-FlickrDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		64D7BCB0D59C22D04DB4F397 /* libPods-FlickrDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlickrDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DAF6D0FDFBB06829CFE6145 /* Pods-FlickrDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrDemoUITests/Pods-FlickrDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7297E1D3137FD01A9BC1C229 /* libPods-FlickrDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlickrDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847EE8CAE4CB335E6F3CB8A1 /* Pods-FlickrDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrDemoTests/Pods-FlickrDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D4176C9EE9E6A7E3362F0D8F /* libPods-FlickrDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlickrDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		893100911BC70DAB760370E4 /* Pods_FlickrDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4553D73ECEEB795E9B7138F /* Pods_FlickrDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFB40A1B235F0EEFC754EE5E /* Pods_FlickrDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C8D6F9712252581E9709BA4 /* libPods-FlickrDemo.a in Frameworks */,
+				31878BF04F443F2EC62E243A /* Pods_FlickrDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0129C21245AB87D52612395A /* libPods-FlickrDemoTests.a in Frameworks */,
+				AC443192EEAA6B8D9A640C16 /* Pods_FlickrDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0091EC027728C9866DE13C8 /* libPods-FlickrDemoUITests.a in Frameworks */,
+				4BCB2B28E19E54613734EB67 /* Pods_FlickrDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +118,9 @@
 		109F7484A11DA3CBFAFDCC8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7297E1D3137FD01A9BC1C229 /* libPods-FlickrDemo.a */,
-				D4176C9EE9E6A7E3362F0D8F /* libPods-FlickrDemoTests.a */,
-				64D7BCB0D59C22D04DB4F397 /* libPods-FlickrDemoUITests.a */,
+				EFB40A1B235F0EEFC754EE5E /* Pods_FlickrDemo.framework */,
+				893100911BC70DAB760370E4 /* Pods_FlickrDemoTests.framework */,
+				E4553D73ECEEB795E9B7138F /* Pods_FlickrDemoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,6 +136,66 @@
 				5E489AE9AAE3D95D016C47E9 /* Pods-FlickrDemoUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A4F59B41F3A061900C84D80 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A4F59B51F3A065200C84D80 /* RWLImageCellNode.h */,
+				5A4F59B61F3A065200C84D80 /* RWLImageCellNode.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5A4F59B81F3A0A6200C84D80 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A4F59B91F3A0A9E00C84D80 /* RWLFlickrSearchViewModel.h */,
+				5A4F59BA1F3A0A9E00C84D80 /* RWLFlickrSearchViewModel.m */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		5A4F59BC1F3A0B7300C84D80 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A4F59D21F3A6EA300C84D80 /* RWLFlickrSearchViewController.h */,
+				5A4F59D31F3A6EA300C84D80 /* RWLFlickrSearchViewController.m */,
+				5A4F59CF1F3A6CCA00C84D80 /* RWLFlickrResultsViewController.h */,
+				5A4F59D01F3A6CCA00C84D80 /* RWLFlickrResultsViewController.m */,
+				5A4F59D51F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.h */,
+				5A4F59D61F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5A4F59C01F3A13F200C84D80 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5A4F59C11F3A143400C84D80 /* RWLHTTPSessionManager.h */,
+				5A4F59C21F3A143400C84D80 /* RWLHTTPSessionManager.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		5A4F59C41F3A1EF100C84D80 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5A4F59C51F3A1F1A00C84D80 /* RWLFlickrService.h */,
+				5A4F59C61F3A1F1A00C84D80 /* RWLFlickrService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		5A4F59C81F3A1F2200C84D80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A4F59C91F3A1F3400C84D80 /* RWLFlickrImage.h */,
+				5A4F59CA1F3A1F3400C84D80 /* RWLFlickrImage.m */,
+				5A4F59CC1F3A22A400C84D80 /* RWLFlickrResponse.h */,
+				5A4F59CD1F3A22A400C84D80 /* RWLFlickrResponse.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		5A9E06131F39073F00A5C034 = {
@@ -141,8 +225,12 @@
 			children = (
 				5A9E06221F39073F00A5C034 /* AppDelegate.h */,
 				5A9E06231F39073F00A5C034 /* AppDelegate.m */,
-				5A9E06251F39073F00A5C034 /* ViewController.h */,
-				5A9E06261F39073F00A5C034 /* ViewController.m */,
+				5A4F59BC1F3A0B7300C84D80 /* Controllers */,
+				5A4F59C81F3A1F2200C84D80 /* Models */,
+				5A4F59B41F3A061900C84D80 /* Views */,
+				5A4F59B81F3A0A6200C84D80 /* View Models */,
+				5A4F59C01F3A13F200C84D80 /* Networking */,
+				5A4F59C41F3A1EF100C84D80 /* Services */,
 				5A9E062B1F39073F00A5C034 /* Assets.xcassets */,
 				5A9E062D1F39073F00A5C034 /* LaunchScreen.storyboard */,
 				5A9E06301F39073F00A5C034 /* Info.plist */,
@@ -247,6 +335,7 @@
 		5A9E06141F39073F00A5C034 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RWL;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Bob Law";
 				TargetAttributes = {
@@ -441,9 +530,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A9E06271F39073F00A5C034 /* ViewController.m in Sources */,
+				5A4F59C31F3A143400C84D80 /* RWLHTTPSessionManager.m in Sources */,
+				5A4F59CE1F3A22A400C84D80 /* RWLFlickrResponse.m in Sources */,
+				5A4F59D71F3A8AD900C84D80 /* RWLFlickrImageDetailViewController.m in Sources */,
+				5A4F59CB1F3A1F3400C84D80 /* RWLFlickrImage.m in Sources */,
 				5A9E06241F39073F00A5C034 /* AppDelegate.m in Sources */,
+				5A4F59D41F3A6EA300C84D80 /* RWLFlickrSearchViewController.m in Sources */,
+				5A4F59BB1F3A0A9E00C84D80 /* RWLFlickrSearchViewModel.m in Sources */,
 				5A9E06211F39073F00A5C034 /* main.m in Sources */,
+				5A4F59C71F3A1F1A00C84D80 /* RWLFlickrService.m in Sources */,
+				5A4F59D11F3A6CCA00C84D80 /* RWLFlickrResultsViewController.m in Sources */,
+				5A4F59B71F3A065200C84D80 /* RWLImageCellNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
